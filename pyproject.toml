@@ -1,0 +1,43 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "demo"
+authors = [{ name = "Eirik Gallefoss", email = "eirik@kakepepper.org" }]
+license = { file = "LICENSE" }
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
+dependencies = [
+    "datastory",
+    "google-cloud-bigquery",
+    "google-cloud-secret-manager",
+    "kaleido",
+    "loguru",
+    "openpyxl",
+    "pandas",
+    "plotly",
+    "psycopg2",
+    "sh",
+    "sqlalchemy",
+    "tabulate",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "db-dtypes",
+    "flit",
+    "isort",
+    "jupytext",
+    "mypy",
+    "nox",
+    "pandas-stubs",
+    "pip-tools",
+    "pytest-randomly",
+    "pytest-xdist",
+    "pytest",
+    "ruff",
+    "sqlalchemy",
+    "testcontainers",
+]
